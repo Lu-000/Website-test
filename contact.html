@@ -6,21 +6,15 @@
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="contact-active">
     <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home-button">Home</a></li>
+            <li><a href="about.html" class="about-button">About Me</a></li>
+            <li><a href="projects.html" class="projects-button">My Projects</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
         </ul>
     </nav>
-
     <section>
         <h1>Contact</h1>
         <p>
@@ -28,24 +22,5 @@
             grujicic.luka@protonmail.com
         </p>
     </section>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.left === '0px') {
-                menu.style.left = '-250px';
-            } else {
-                menu.style.left = '0px';
-            }
-        }
-
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('menu');
-            var menuIcon = document.querySelector('.menu-icon');
-            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-                menu.style.left = '-250px';
-            }
-        });
-    </script>
 </body>
 </html>
